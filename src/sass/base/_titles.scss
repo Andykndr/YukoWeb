@@ -1,0 +1,39 @@
+.h2_title {
+  color: #000;
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background-color: black;
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background-color: black;
+  }
+}
+.h3_title {
+  color: #000;
+  font-weight: 500;
+  font-size: 25px;
+  &_footer {
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+  }
+  &_employee {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}

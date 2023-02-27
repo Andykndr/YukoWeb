@@ -1,0 +1,148 @@
+.carousel {
+  background: linear-gradient(
+    179.1deg,
+    rgba(247, 238, 238, 0.829) -1.9%,
+    rgba(247, 202, 201, 0.89) 44.9%,
+    rgba(145, 168, 208, 0.671) 96.1%
+  );
+  padding: 90px 0;
+}
+.carousel_img {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 50px 0;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.carousel_item {
+  background: radial-gradient(
+    329px at 3.1% 9.3%,
+    rgb(251, 204, 235) 28.1%,
+    rgba(221, 221, 221, 0.15) 100.7%
+  );
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  margin: 100px 20px 20px 20px;
+  padding: 20px;
+  min-height: 370px;
+  border: 1px solid #000;
+  border-radius: 0 50px;
+  text-align: center;
+  &.slick-center {
+    opacity: 1;
+  }
+}
+
+.carousel_textblock {
+  margin-top: 90px;
+  h3 {
+    font-weight: 700;
+  }
+}
+.carousel_desc {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 14px;
+}
+.carousel_price {
+  font-size: 16px;
+  font-weight: 700;
+}
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: -55px;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    scale: 1;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: -55px;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+    scale: 1;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+.link_to_booksy {
+  text-align: center;
+  margin-top: 50px;
+}
+.carousel_link {
+  width: 20%;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+.slick-dots {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    margin: 0 10px;
+    &.slick-active {
+      button {
+        background-color: #000000;
+        &:focus {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+  button {
+    border-radius: 100%;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid rgb(8, 6, 6);
+  }
+}
