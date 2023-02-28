@@ -43,8 +43,12 @@
   .carousel_link {
     font-size: 22px;
   }
+  .portfolio_tabs {
+    flex-wrap: wrap;
+  }
   .portfolio_tab {
-    min-width: 125px;
+    min-width: 180px;
+    margin-top: 10px;
   }
   .h3_title {
     font-size: 18px;
@@ -281,6 +285,7 @@
     grid-auto-rows: 220px;
     gap: 10px;
   }
+
   .footer {
     text-align: center;
     grid-template-columns: 1fr;
