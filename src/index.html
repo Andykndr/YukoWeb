@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Merienda:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -23,11 +27,11 @@
     <header class="header">
       <div class="container">
         <div class="header_wrapper">
-          <a href="#" class="header_logo"
-            ><img src="img/logo/Yuko-logos_white.png" alt="mainlogo"
-          /></a>
+          <a href="#" class="header_logo">
+            <img src="img/logo/Yuko-logos_white.png" alt="mainlogo" />
+          </a>
           <div class="header_promo">
-            <a class="link_hover promo_item" href="#carousel">Usługi</a>
+            <a class="link_hover promo_item" href="#carousel_wrapper">Usługi</a>
             <a class="link_hover promo_item" href="#portfolio">Portfolio</a>
             <a class="link_hover promo_item" href="#contact">Contact</a>
           </div>
@@ -134,98 +138,92 @@
         </div>
       </div>
     </section>
-    <div class="carousel" id="carousel">
+
+    <div class="carousel_wrapper">
+      <h2 class="h2_title">Uslugi</h2>
       <div class="container">
-        <h2
-          data-wow-duration="2s"
-          class="h2_title animate__animated animate__fadeIn wow"
-        >
-          Usługi
-        </h2>
-        <div class="carousel_slider animate__animated animate__fadeInUp wow">
-          <div class="carousel_item">
-            <img
-              src="img/services/nails.jpg"
-              alt="nails"
-              class="carousel_img"
-            />
-            <div class="carousel_textblock">
-              <h3 class="h3_title">Manicure hybrydowy</h3>
-              <div class="carousel_desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                iure
-                <div class="carousel_price">Cena : 130 zł</div>
-              </div>
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="carousel_img">
+              <img draggable="false" src="img/services/brow.jpg" alt="img" />
             </div>
-          </div>
-          <div class="carousel_item">
-            <img src="img/services/eye.jpg" alt="nails" class="carousel_img" />
-            <div class="carousel_textblock">
-              <h3 class="h3_title">
-                Pedicure <br />
-                klasyczny
-              </h3>
-              <div class="carousel_desc">
-                Lorem ipsum dolor sit amet icing elit. Omnis iure deserunt eaque
-                adipisci id facere blanditiis suscipit quos ullam nemo!
-                <div class="carousel_price">Cena : 120 zł</div>
-              </div>
+            <h2 class="carousel_title">Lash</h2>
+            <div class="carousel_desc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Eligendi, deleniti.
             </div>
-          </div>
-          <div class="carousel_item">
-            <img
-              src="img/services/nails2.jpg"
-              alt="nails"
-              class="carousel_img"
-            />
-            <div class="carousel_textblock">
-              <h3 class="h3_title">Laminacja + koloryzacja rzęs</h3>
-              <div class="carousel_desc">
-                Lorem i nsectetur, adipisicing elit. Omnis iure deserunt eaque
-                adipisci id facere blanditiis suscipit quos ullam nemo!
-                <div class="carousel_price">Cena : 140 zł</div>
-              </div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+          <li class="card">
+            <div class="carousel_img">
+              <img draggable="false" src="img/services/eye.jpg" alt="img" />
             </div>
-          </div>
-          <div class="carousel_item">
-            <img
-              src="img/services/nails.jpg"
-              alt="nails"
-              class="carousel_img"
-            />
-            <div class="carousel_textblock">
-              <h3 class="h3_title">Brwi regulacja +koloryzacja</h3>
-              <div class="carousel_desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                iure deserunt eaque suscipit quos
-                <div class="carousel_price">Cena : 100 zł</div>
-              </div>
+            <h2 class="carousel_title">Brow</h2>
+            <div class="carousel_desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </div>
-          </div>
-          <div class="carousel_item">
-            <img src="img/services/brow.jpg" alt="nails" class="carousel_img" />
-            <div class="carousel_textblock">
-              <h3 class="h3_title">Klamra Frasera , Tytanowa</h3>
-              <div class="carousel_desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
-                iure deserunt es
-                <div class="carousel_price">Cena : 100 zł</div>
-              </div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+          <li class="card">
+            <div class="carousel_img">
+              <img src="img/services/nails.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
+            <h2 class="carousel_title">Nails</h2>
+            <div class="carousel_desc">Lorem ipsum dolor sit.</div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+          <li class="card">
+            <div class="carousel_img">
+              <img src="img/services/brow.jpg" alt="img" draggable="false" />
+            </div>
+            <h2 class="carousel_title">Lach</h2>
+            <div class="carousel_desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
+              ea.
+            </div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+          <li class="card">
+            <div class="carousel_img">
+              <img src="img/services/nails2.jpg" alt="img" draggable="false" />
+            </div>
+            <h2 class="carousel_title">Pedicure</h2>
+            <div class="carousel_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              laboriosam enim voluptatibus?Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Sed laboriosam enim voluptatibus?
+            </div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+          <li class="card">
+            <div class="carousel_img">
+              <img src="img/services/eye.jpg" alt="img" draggable="false" />
+            </div>
+            <h2 class="carousel_title">Manic</h2>
+            <div class="carousel_desc">
+              Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <div class="carousel_price">200 zl</div>
+          </li>
+        </ul>
+
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+      <div class="container">
         <div class="link_to_booksy">
-          Aby zobaczyć więcej usług, przejdź do linku Booksy &#10084;
+          Aby zobaczyć więcej usług, przejdź do linku Booksy &#10084; <br />
+          <a
+            class="carousel_link link_hover_black"
+            target="_blank"
+            href="https://booksy.com/pl-pl/162226_yuko_paznokcie_3_warszawa"
+          >
+            Booksy
+          </a>
         </div>
-        <a
-          class="carousel_link"
-          target="_blank"
-          href="https://booksy.com/pl-pl/162226_yuko_paznokcie_3_warszawa"
-        >
-          Booksy</a
-        >
       </div>
     </div>
+
     <section class="portfolio_wrapper" id="portfolio">
       <div class="container">
         <h2
@@ -285,7 +283,7 @@
         </div>
         <div class="portfolio animate__animated animate__fadeIn">
           <img
-            src="img/portfolio/lash/brow.jpg"
+            src="img/portfolio/lash/eye.jpg"
             class="portfolio_img portfolio_item horizontal"
             alt="nails"
           />
@@ -322,7 +320,7 @@
             alt="lash"
           />
           <img
-            src="img/portfolio/manicure/nails2.jpg"
+            src="img/portfolio/manicure/nails.jpg"
             class="portfolio_img portfolio_item vertical"
             alt="nails"
           />

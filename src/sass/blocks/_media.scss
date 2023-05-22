@@ -1,7 +1,4 @@
 @media (max-width: 1070px) {
-  .carousel_item {
-    margin: 100px 10px 10px;
-  }
   .slick-prev {
     top: 500px;
     left: 0;
@@ -18,9 +15,7 @@
   .container {
     max-width: 720px;
   }
-  .carousel_item {
-    margin: 100px 20px 10px;
-  }
+
   .header_info h1 {
     font-size: 38px;
   }
@@ -178,16 +173,20 @@
       left: -15px;
     }
   }
-  .carousel {
-    padding: 40px 0;
-  }
-  .carousel_img {
-    width: 130px;
-    height: 130px;
-  }
-  .carousel_item {
-    margin: 60px 20px 10px;
-    min-height: 320px;
+  .carousel_wrapper {
+    .container {
+      i {
+        &:last-child {
+          right: -12px;
+        }
+        &:first-child {
+          left: -18px;
+        }
+      }
+      .carousel {
+        grid-auto-columns: calc((100% / 2) - 13px);
+      }
+    }
   }
   .portfolio_tabs {
     flex-wrap: wrap;
@@ -269,16 +268,21 @@
     width: 120px;
     margin-top: 10px;
   }
-  .carousel_link {
-    width: 30%;
-    font-size: 18px;
-  }
-  .carousel_item {
-    padding: 5px 5px 20px;
-  }
-  .carousel_img {
-    width: 115px;
-    height: 115px;
+  .carousel_wrapper {
+    .container {
+      i {
+        &:last-child {
+          right: 23px;
+        }
+        &:first-child {
+          left: 20px;
+        }
+      }
+      .carousel {
+        margin: 0 30px;
+        grid-auto-columns: 100%;
+      }
+    }
   }
   .portfolio_active {
     grid-template: 1fr / 1fr;
@@ -319,14 +323,27 @@
   }
 }
 @media (max-width: 480px) {
-  .carousel_slider {
+  .carousel__arrow {
+    &_left {
+      left: 15px;
+    }
+    &_right {
+      right: 15px;
+    }
+  }
+  .carousel__wrapper {
+    padding: 0 50px;
     margin: 0 auto;
-    width: 65%;
+    grid-auto-columns: calc(100%);
   }
 }
 @media (max-width: 400px) {
-  .carousel_slider {
+  .carousel__arrow {
+    display: none;
+  }
+  .carousel__wrapper {
+    padding: 0 40px;
     margin: 0 auto;
-    width: 70%;
+    grid-auto-columns: calc(100%);
   }
 }
