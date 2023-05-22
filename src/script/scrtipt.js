@@ -13,24 +13,6 @@ promoItem.forEach((item) => {
   });
 });
 
-$(function () {
-  $('ul.portfolio_tabs').on(
-    'click',
-    'li:not(.portfolio_tab_active)',
-    function () {
-      $(this)
-        .addClass('portfolio_tab_active')
-        .siblings()
-        .removeClass('portfolio_tab_active')
-        .closest('div.container')
-        .find('div.portfolio')
-        .removeClass('portfolio_active')
-        .eq($(this).index())
-        .addClass('portfolio_active');
-    }
-  );
-});
-
 const carousel = document.querySelector('.carousel'),
   arrows = document.querySelectorAll('.carousel_wrapper i'),
   cardWidth = carousel.querySelector('.card').offsetWidth,
@@ -102,3 +84,19 @@ carousel.addEventListener('mousemove', draggble);
 carousel.addEventListener('scroll', infiniteScroll);
 carousel.addEventListener('mouseenter', () => clearInterval(timeoutId));
 carousel.addEventListener('mouseleave', autoPlay);
+
+const tabs = document.querySelectorAll('.portfolio_tabs li'),
+  portfolios = document.querySelectorAll('.portfolio');
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    portfolios.forEach((portfolio) => {
+      portfolio.classList.remove('portfolio_active');
+    });
+    tabs.forEach((tab) => {
+      tab.classList.remove('portfolio_tab_active');
+    });
+    portfolios[index].classList.add('portfolio_active');
+    tabs[index].classList.add('portfolio_tab_active');
+  });
+});
