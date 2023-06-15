@@ -85,18 +85,42 @@ carousel.addEventListener('scroll', infiniteScroll);
 carousel.addEventListener('mouseenter', () => clearInterval(timeoutId));
 carousel.addEventListener('mouseleave', autoPlay);
 
-const tabs = document.querySelectorAll('.portfolio_tabs li'),
-  portfolios = document.querySelectorAll('.portfolio');
+// const tabs = document.querySelectorAll('.portfolio_tabs li'),
+//   portfolios = document.querySelectorAll('.portfolio');
 
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    portfolios.forEach((portfolio) => {
-      portfolio.classList.remove('portfolio_active');
+// tabs.forEach((tab, i) => {
+//   tab.addEventListener('click', () => {
+//     portfolios.forEach((portfolio) => {
+//       portfolio.classList.remove('portfolio_active');
+//     });
+//     tabs.forEach((tab) => {
+//       tab.classList.remove('portfolio_tab_active');
+//     });
+//     portfolios[i].classList.add('portfolio_active');
+//     tabs[i].classList.add('portfolio_tab_active');
+//   });
+// });
+
+function tabs(tabsSelector, contentsSelector, tabActive, contentActive) {
+  const tabs = document.querySelectorAll(tabsSelector),
+    content = document.querySelectorAll(contentsSelector);
+
+  tabs.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      content.forEach((item) => {
+        item.classList.remove(contentActive);
+      });
+      tabs.forEach((item) => {
+        item.classList.remove(tabActive);
+      });
+      content[i].classList.add(contentActive);
+      tabs[i].classList.add(tabActive);
     });
-    tabs.forEach((tab) => {
-      tab.classList.remove('portfolio_tab_active');
-    });
-    portfolios[index].classList.add('portfolio_active');
-    tabs[index].classList.add('portfolio_tab_active');
   });
-});
+}
+tabs(
+  '.portfolio_tabs > li',
+  '.portfolio',
+  'portfolio_tab_active',
+  'portfolio_active'
+);
