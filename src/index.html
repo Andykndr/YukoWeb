@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -503,4 +503,164 @@
     </script>
     <script src="script/scrtipt.js"></script>
   </body>
+</html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Post</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eceef2;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 12px;
+      object-fit: cover;
+      border: 2px solid #e0e0e0;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .username {
+        font-size: 20px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .timestamp {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .post-header::after {
+      content: '';
+      position: absolute;
+      left: 25px;
+      top: 60px;
+      bottom: 60px;
+      width: 2px;
+      background-color: #733535;
+      z-index: 0;
+    }
+    .post {
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+    }
+
+    .post-content {
+        padding-left: 50px;
+        height: 130px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .post-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .post-footer {
+        margin-left: 40px;
+      display: flex;
+      gap: 5px;
+      justify-content: flex-start;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .post-footer span {
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    
+
+    .view-more-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #000000e1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background-color 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+      background-color: #145ddb;
+    }
+.vertical-line {
+      position: absolute;
+      left: 44px;
+      top: 85px;
+      bottom: 80px;
+      width: 2px;
+      background-color: #e0e0e0;
+      z-index: 0;
+    }
+  
+    
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="post-header">
+        
+      <img class="avatar" src="https://media.istockphoto.com/id/1014968524/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%B1%D1%96%D0%BB%D0%B8%D0%B9-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%B8%D0%B9-%D0%B1%D1%96%D0%BB%D0%B8%D0%B9-%D0%BA%D0%BE%D0%BB%D1%96%D1%80.jpg?s=612x612&w=0&k=20&c=fpLlMQjBVkQugmUAnZDFF2q_Ww1nuspm28_a2TdZqWs=" alt="">
+      <div class="user-info">
+        <span class="username">сабмитФид</span>
+        <span class="timestamp">Just now</span>
+      </div>
+    </div>
+      <div class="vertical-line"></div>
+    <div class="post-content">
+      <h4 style="margin: 0px" >
+        We like to eat pizza. 
+      </h4>
+        <br>
+  Мне было интересно, что вы думаете о том, что я написал.и я посмотрел на это и подумал, что это было действительно интересно.тогда я понял , что я действительно люблю еду.
+    </div>
+    <div class="post-footer">
+      <span style="rotate: 180deg">👎🏻</span>
+      <span >1.4k </span>
+      <span>👎🏻</span>
+      <span style="padding-left: 210px;">💬 Comments (3737...) </span>
+      <span></span>
+    </div>
+    <button class="view-more-btn"> сабмитФид</button>
+  </div>
+</body>
 </html>
